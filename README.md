@@ -27,3 +27,6 @@ terminado o processo digite o comando
 ```
 ng serve
 ```
+# Link para documentação Swagger
+http://localhost:8080/servicoA/swagger-ui/index.html#/%2Fresource/findByIdUsingGET
+http://localhost:8081/servicoB/swagger-ui/index.html#/%2Fresource/findByIdUsingGET
