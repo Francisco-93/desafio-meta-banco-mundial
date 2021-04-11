@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+ docker-app:
+    image: worldbank/world-bank-servico:latest
+    ports:
+      - "8080:8080"
+    network_mode: 'host'
+ docker-app_b:
+    image: worldbank_servico_b/world-bank:latest
+    ports:
+      - "8081:8081"
+    network_mode: 'host'

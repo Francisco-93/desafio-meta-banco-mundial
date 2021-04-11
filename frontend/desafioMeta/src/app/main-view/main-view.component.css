@@ -1,0 +1,38 @@
+.container{
+  width: 100vw;
+  height: 670px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.world-bank-card {
+  max-width: 400px;
+}
+
+.header-image {
+  background-image: url('https://avatars.githubusercontent.com/u/59286768?s=400&u=aa576b96879ae194f404488aaf78dc7fcf6361e3&v=4');
+  background-size: cover;
+}
+
+.back-image{
+  width: 400px;
+  height: 400px;
+  background-color: cornflowerblue;
+  background-image: url('https://www.coladaweb.com/wp-content/uploads/2014/12/Banco-Mundial.png');
+  
+}
+
+p{
+  color: darkblue;
+  padding-top: 15px;
+}
+
+button{
+  width: 400px;
+  background-color: #137cd1;
+  color: white;
+}
+
+

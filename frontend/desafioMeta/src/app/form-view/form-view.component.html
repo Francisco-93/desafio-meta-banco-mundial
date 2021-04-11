@@ -1,0 +1,56 @@
+<div class="container">
+  <mat-card class="world-bank-card mat-elevation-z20">
+    <div class="dropdown">
+      <h4>Selecione a sigla do País</h4>
+      <mat-form-field appearance="fill">
+        <mat-label>Sigla País</mat-label>
+        <mat-select (selectionChange)="linkInputCountry($event)">
+          <mat-option>Selecione</mat-option>
+          <mat-option *ngFor="let c of countryOptions" [value]="c">
+            {{c.id}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="text-field">
+      <mat-form-field>
+        <mat-label>País</mat-label>
+        <input matInput disabled [value]="selectedName">
+      </mat-form-field>
+    </div>
+    <div class="dropdown">
+      <h4>Selecione o ano da aferição</h4>
+      <mat-form-field appearance="fill">
+        <mat-label>Ano Indice</mat-label>
+        <mat-select (selectionChange)="linkInputYears($event)">
+          <mat-option>Selecione</mat-option>
+          <mat-option *ngFor="let y of yearsOptions" [value]="y">
+            {{y}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </mat-card>
+  <button mat-raised-button color="primary" (click)="getInformations()">Enviar</button>
+  
+  <table mat-table [dataSource]="informations" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="countryName">
+      <th mat-header-cell *matHeaderCellDef> País </th>
+      <td mat-cell *matCellDef="let element"> {{element.countryName}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef> Data </th>
+      <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="poorPopulation">
+      <th mat-header-cell *matHeaderCellDef> População Pobre (%) </th>
+      <td mat-cell *matCellDef="let element"> {{element.poorPopulation}} </td>
+    </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
