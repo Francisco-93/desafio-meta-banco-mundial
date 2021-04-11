@@ -10,10 +10,10 @@ Ir até a raíz do microsserviço A e rodar o seguinte comando:
 docker-compose up
 ```
 
-Para rodar a aplicação frontend, baixe o projeto do repositório do github no seguinte link:
+Para rodar a aplicação frontend, baixe o projeto do repositório do github no seguinte link: https://github.com/Francisco-93/desafio-meta-banco-mundial.git
 
 ```
-git clone 
+git clone https://github.com/Francisco-93/desafio-meta-banco-mundial.git
 ```
  
 entre dentro da pasta /frontend e execute o comando
